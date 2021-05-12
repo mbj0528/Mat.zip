@@ -1,8 +1,16 @@
-# Mat.zip
+<!-- TOC -->
+
+- [1. Mat.zip](#1-matzip)
+  - [1.1. Service scenario](#11-service-scenario)
+  - [1.2. Architecture](#12-architecture)
+  - [1.3. Built by node express generator](#13-built-by-node-express-generator)
+
+<!-- /TOC -->
+# 1. Mat.zip
 
 > 한국의 Matzip(맛집)을 찾아서
 
-## Service scenario
+## 1.1. Service scenario
 
 1. 맵 좌표(위치) 조회
 
@@ -26,5 +34,10 @@
 
 6. enhance 음식점 점수 저장(캐쉬), 반응성을 빠르게
 
-## Architecture
+## 1.2. Architecture
 ![image](https://user-images.githubusercontent.com/29352783/113153835-6dbd9480-9272-11eb-9e55-afbf72d7728a.png)
+
+## 1.3. Built by node express generator
+```
+$ express --view=pug Mat.zip
+```
