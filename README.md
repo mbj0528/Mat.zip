@@ -44,3 +44,5 @@ $ express --view=pug Mat.zip
 
 ## 참고
 convert from html to jade : https://html2jade.org/
+naver map api marker example : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=lsw3210&logNo=221993983515
+https://navermaps.github.io/maps.js.ncp/docs/tutorial-infowindow-options.example.html
