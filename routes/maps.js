@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('map', { title: 'Map', name: 'Yonggon' });
+  console.log(req.query.lat)
+  console.log(req.query.lon)
+  res.render('map', { latitude: req.query.lat, longitude: req.query.lon });
+  // get latitude, longitude from url query string
 });
 
 module.exports = router;

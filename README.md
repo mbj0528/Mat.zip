@@ -46,3 +46,14 @@ $ express --view=pug Mat.zip
 convert from html to jade : https://html2jade.org/
 naver map api marker example : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=lsw3210&logNo=221993983515
 https://navermaps.github.io/maps.js.ncp/docs/tutorial-infowindow-options.example.html
+여러 마커 표시하기
+https://navermaps.github.io/maps.js/docs/tutorial-marker-viewportevents.example.html
+
+## gitpod 실행시 환경설정
+https://gitpod.io/#/github.com/mbj0528/Mat.zip 접속
+npm install yarn
+yarn start
+open brower -> url 복사
+ncloud 접속, 서비스-maps 선택
+이용신청하기, 만들어놓은 App정보 변경 후 새로운 url 입력
+url/maps 입력으로 만들어놓은 페이지 접속
