@@ -4,19 +4,19 @@ html
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no')
-    title 쟈니를 찾아서
+    title 중심좌표가뭘까요
     script(type='text/javascript' src='https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=b5h2cuafxf&callback=initMap')
   body
 html
   body
     #map(style='width:100%;height:1200px;')
     script.
-      //var jianhome = new naver.maps.LatLng(37.487527999698464, 127.0220543538699);
-      var jianhome = new naver.maps.LatLng(#{latitude}, #{longitude});
-      var mbjhome = new naver.maps.LatLng(37.37201673780629, 127.11518674004259);
+      var jianhome = new naver.maps.LatLng(37.487527999698464, 127.0220543538699);
+      //- var jianhome = new naver.maps.LatLng(#{latitude}, #{longitude});
+      //- var mbjhome = new naver.maps.LatLng(37.37201673780629, 127.11518674004259);
       var map = new naver.maps.Map('map', {
       center: new naver.maps.LatLng(37.359357, 127.104835), // naver 본사 센터
-      zoom: 11
+      zoom: 12
       });
       var contentString = [
       '<div class="iw_inner">',
@@ -26,6 +26,7 @@ html
       '   </p>',
       '</div>'
       ].join('');
+      
       var jianinfowindow = new naver.maps.InfoWindow({
         content: contentString,
         maxWidth: 140,
@@ -44,9 +45,22 @@ html
       });
 
       naver.maps.Event.addListener(marker, "click", function(e) {
+      alert(map.getCenter());
       if (jianinfowindow.getMap()) {
       jianinfowindow.close();
       } else {
       jianinfowindow.open(map, marker);
       }
       });
+      //- naver.maps.Event.addListener(map, "center_changed", function(e){
+      //-   console.log(map.getCenter());
+      //- });
+      //- naver.maps.Event.addListener(map, "zoom_changed", function(e){
+      //-   console.log(map.getZoom());
+      //- });
+
+      function intervalFunc() {
+      console.log(map.getCenter());
+      }
+
+      setInterval(intervalFunc, 3000);
